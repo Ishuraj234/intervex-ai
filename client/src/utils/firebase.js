@@ -19,7 +19,8 @@
 // export {auth , provider}
 
 import { initializeApp } from "firebase/app";
-import {getAuth, GoogleAuthProvider} from "firebase/Auth"
+import { getAuth, GoogleAuthProvider } from "firebase/auth";
+
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_APIKEY,
   authDomain: "interview-8ae09.firebaseapp.com",
@@ -32,7 +33,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
 
-const provider = new GoogleAuthProvider()
-
-export {auth , provider}
+export { auth, provider };
